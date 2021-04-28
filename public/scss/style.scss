@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: dragonFont;
+    src: url(/public/fonts/gotu-regular.ttf);
+}
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0px auto;
+}
+.row{
+    width: 100%;
+    >.item{
+        float: left;
+        width: 33.33%;
+        box-sizing: border-box;
+    }
+}
+.row::before{
+    content: " ";
+    display: table;
+    box-sizing: border-box;
+}
+.row::after{
+    content: " ";
+    clear: both;
+    box-sizing: border-box;
+    display: block;
+}
+@media(max-width: 1199px){
+    .container{
+        max-width: 970px;
+    }
+}
+@media(max-width: 991px){
+    .container{
+        max-width: 750px;
+    }
+}
+@media(max-width: 767px){
+    .container{
+        max-width: 100%;
+    }
+}
